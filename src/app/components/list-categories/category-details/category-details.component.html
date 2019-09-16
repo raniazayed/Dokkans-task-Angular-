@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="col-md-12">
+    <div class="row mt-5">
+      <div class="col-md-6 col-sm-12">
+        <h2 class="m-0 p-0">{{categoryName}}</h2>
+        <div class="line mb-4"></div>
+      </div>
+      <!-- ADD PRODUCT -->
+      <div class="col-md-6 col-sm-12 text-right">
+        <button class="btn btn-success" (click)="addProduct()"> Add product</button>
+      </div>
+    </div>
+
+<!-- list of products -->
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th class="hidden">code</th>
+          <th>name</th>
+          <th>price</th>
+          <th>Action</th>
+          <th>
+            <div class="text-right">
+              <button class="btn btn-danger" (click)="deleteproduct()"> Delete</button>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of allproducts| paginate : { id: 'listing_pagination',
+          itemsPerPage: 2,
+          currentPage: p}" class="mb-5">
+          <td class="hidden"> <input type="checkbox" (change)="sendId(product.prodId,$event)" class="mr-2"
+              aria-label="Checkbox for following text input">{{product.code}}</td>
+          <td>{{product.prodName}}</td>
+          <td>{{product.price}}</td>
+          <div class="">
+            <button class="btn btn-danger" (click)="editProduct(product.prodId)" style="margin-left: 20px;">
+              Edit</button>
+          </div>
+        </tr>
+      </tbody>
+</table>
+    <pagination-controls id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="p=$event">
+    </pagination-controls>
+
+
+  </div>
+</div>

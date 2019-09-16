@@ -1,0 +1,9 @@
+[
+
+    {"categoryName":"food","products":[{"prodId":0,"prodName":"glasses", "price":200},{"prodId":0,"prodName":"glasses", "price":200},{"prodId":0,"prodName":"glasses", "price":200}]},
+    {"categoryName":"electronics","products":[{"prodId":1,"prodName":"mouse", "price":100},{"prodId":1,"prodName":"mouse", "price":100}]},
+    {"categoryName":"execessories","products":[{"prodId":2,"prodName":"airpods", "price":50},{"prodId":2,"prodName":"airpods", "price":50}]}
+    
+
+    
+]

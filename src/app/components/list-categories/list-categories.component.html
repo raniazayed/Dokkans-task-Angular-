@@ -1,0 +1,33 @@
+
+
+<app-navbar></app-navbar>
+
+<div class="container w-70">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12">
+      <h2 class="m-0 p-0">ALL Categories</h2>
+      <div class="line mb-4"></div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 text-right">
+      <button class="btn btn-primary " (click)="openDialog()">Add Category</button>
+
+</div>
+  </div>
+    <div *ngIf="allCategories">
+      <div class="row mb-4">
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let category of allCategories">
+          <div class="card text-center">
+            <div class="img-bg" >
+              <img src="assets/images/w4.png" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+              <a [routerLink]="['/categorydetails',category.categoryName]" class="text-center">
+                <h5 class="card-title p-0 m-0 text-center">{{category.categoryName}}</h5>
+              </a>
+              <div class="line "></div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

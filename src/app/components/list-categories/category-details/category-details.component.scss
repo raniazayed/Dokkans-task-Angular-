@@ -1,0 +1,9 @@
+@import '../../../../assets/sass/variables';
+@import '../../../../assets/sass/functions';
+
+.line{
+    @extend %line;
+}
+h2{
+    @extend %title;
+}

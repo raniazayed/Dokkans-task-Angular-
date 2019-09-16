@@ -1,0 +1,53 @@
+@import '../../../assets/sass/variables';
+@import '../../../assets/sass/functions';
+
+.line{
+    @extend %line;
+}
+h2{
+    @extend %title;
+}
+.w-70{
+    width: 70%;
+    padding: 75px 0;
+}
+.categorycard{
+    background: white;
+    box-shadow: 0 1px 6px rgba(57, 73, 76, 0.35);
+}
+.card{
+    padding: 25px 28px;
+    box-shadow: 0 1px 6px rgba(57, 73, 76, 0.35);
+    border: none;
+    border-radius: 0;
+    .card-title{
+        text-transform: uppercase;
+    }
+    .card-body{
+        .line{
+            margin-right: 35px;
+        }
+    }
+    .img-bg{
+        background: $secondaryColor;
+        padding: 10px 0 0 10px;
+
+    }
+    a{
+        color: $fontcolor;
+        @extend %regularOpenSans;
+        text-decoration: none;
+        a:hover{
+            color: $secondaryColor;
+        }
+    }
+}
+// MEDIA QUERY
+@media (max-width: 600px) {
+    html{
+        font-size: 10px;
+        h2{
+            color:red !important;
+        }
+    }
+  }
